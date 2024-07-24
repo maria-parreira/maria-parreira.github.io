@@ -5,7 +5,7 @@
             "href": "/"
         },
         {
-            "title": "About",
+            "title": "About me",
             "href": "/about"
         },
         {
@@ -30,5 +30,4 @@
             "type": "link"
         }
     ]
-
 }

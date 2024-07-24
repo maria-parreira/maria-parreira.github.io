@@ -26,8 +26,8 @@
                     "title": "React"
                 },
                 {
-                    "icon": "images/skills/nodejs.png",
-                    "title": "Nodejs"
+                    "icon": "images/skills/spring.png",
+                    "title": "SpringBoot"
                 }
             ]
         },
@@ -41,6 +41,10 @@
                 {
                     "icon": "images/skills/docker.png",
                     "title": "Docker"
+                },
+                {
+                    "icon": "images/skills/jenkins.png",
+                    "title": "Jenkins"
                 }
             ]
     }

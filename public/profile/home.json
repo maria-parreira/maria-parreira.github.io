@@ -1,4 +1,5 @@
 {
-    "name": "Maria Parreira",
-    "roles": ["a Junior Software Developer"]
+    "name": "Hello World!",
+    "roles": "a Junior Software Developer",
+    "image":"images/home.png"
 }

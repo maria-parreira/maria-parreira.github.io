@@ -7,7 +7,8 @@ import FallbackSpinner from './FallbackSpinner';
 
 const styles = {
   nameStyle: {
-    fontSize: '5em',
+    marginTop: '80px',
+    fontSize: '4em',
   },
   inlineChild: {
     display: 'inline-block',
@@ -18,6 +19,12 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  imageStyle: {
+    height: '500px',
+    width: '500px',
+    marginBottom: '-40px',
+    objectFit: 'cover',
   },
 };
 
@@ -46,6 +53,9 @@ function Home() {
               strings: data?.roles,
             }}
           />
+        </div>
+        <div>
+          <img src={data.image} alt="Profile" style={styles.imageStyle} />
         </div>
         <Social />
       </div>
