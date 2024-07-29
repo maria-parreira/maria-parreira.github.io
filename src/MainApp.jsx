@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Suspense } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import FallbackSpinner from './components/FallbackSpinner';
-import NavBarWithRouter from './components/NavBar';
+import NavBar from './components/NavBar'; // Certifique-se de que o componente NavBar não precisa de withRouter
 import Home from './components/Home';
 import endpoints from './constants/endpoints';
 
@@ -14,34 +14,31 @@ function MainApp() {
     })
       .then((res) => res.json())
       .then((res) => setData(res))
-      .catch((err) => err);
+      .catch((err) => console.error('Error fetching data:', err));
   }, []);
 
   return (
     <div className="MainApp">
-      <NavBarWithRouter />
-      <main className="main">
-        <Switch>
-          <Suspense fallback={<FallbackSpinner />}>
-            <Route exact path="/" component={Home} />
-            {data
-              && data.sections.map((route) => {
-                const SectionComponent = React.lazy(() => import('./components/' + route.component));
-                return (
-                  <Route
-                    key={route.headerTitle}
-                    path={route.path}
-                    component={() => (
-                      <SectionComponent header={route.headerTitle} />
-                    )}
-                  />
-                );
-              })}
-          </Suspense>
-        </Switch>
-      </main>
-    </div>
-  );
+        <NavBar />
+           <main className="main">
+                <Suspense fallback={<FallbackSpinner />}>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        {data && data.sections.map((route) => {
+                            const SectionComponent = React.lazy(() => import('./components/' + route.component));
+                            return (
+                                <Route
+                                    key={route.headerTitle}
+                                    path={route.path}
+                                    element={<SectionComponent header={route.headerTitle} />}
+                                />
+                            );
+                        })}
+                    </Routes>
+                </Suspense>
+            </main>
+        </div>
+    );
 }
 
 export default MainApp;

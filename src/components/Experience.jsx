@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import { Container } from 'react-bootstrap';
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
-import Fade from 'react-reveal';
+import Fade from 'react-awesome-reveal';
 import Header from './Header';
 import endpoints from '../constants/endpoints';
 import FallbackSpinner from './FallbackSpinner';
