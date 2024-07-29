@@ -1,0 +1,16 @@
+{
+    "education":[
+        {
+            "title": "Oct 2023 - Jul 2024",
+            "cardTitle": "Postgraduation, Software Development",
+            "cardSubtitle":"Instituto Superior Engenharia do Porto, Portugal",
+            "cardDetailedText": "Grade - 16/20"
+        },
+        {
+            "title": "Sept 2015 - Feb 2022",
+            "cardTitle": "Msc, Veterinary Medicine",
+            "cardSubtitle":"Évora University, Portugal",
+            "cardDetailedText": "Grade - 15/20"
+        }
+    ]
+}

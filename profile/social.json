@@ -1,0 +1,16 @@
+{
+    "social": [
+        {
+            "network" : "linkedin",
+            "href": "https://www.linkedin.com/in/maria-parreira-a85324123/"
+        },
+        {
+            "network" : "github",
+            "href": "https://github.com/maria-parreira"
+        },
+        {
+            "network" : "email",
+            "href": "mariaparreira71@gmail.com"
+        }
+    ]
+}
